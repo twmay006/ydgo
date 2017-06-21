@@ -27,13 +27,13 @@
     <img src="images/loading.svg">
 </div>
 
-<div class="swiper-container">
+<div class="swiper-container" id="app">
     <div class="swiper-wrapper">
         <div class="swiper-slide slide-1 swiper-no-swiping">
         	<h2 class="animated" data-ani-name="zoomIn" data-ani-duration="1s" data-ani-delay="0s">我的2017运动成绩单</h2>
         	<div class="item-message">
 	        	<div class="animated" data-ani-name="fadeInDown" data-ani-duration="1s" data-ani-delay="0.3s">
-	        		<h6>收件人：</h6>
+	        		<h6>{{message}}：</h6>
 	        		<h4>XXX</h4>
 	        		<h6>发信人：花园体育中心</h6>
 	        	</div>
@@ -120,7 +120,15 @@
 
 <!-- Don't delete this. It's needed for development workflow. -->
 <script src="javascripts/bundle.js"></script>
-
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!'
+  }
+})
+</script>
 </body>
 
 </html>
